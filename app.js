@@ -10,12 +10,12 @@ app.use(express.urlencoded());//help to take form data
 app.set('view engine','pug');//set the template engine as pug
 app.set('views',path.join(__dirname,'views'));//set the views directory
 //ENDPOINTS
-app.get('/applyNow',(req,res)=>{
+app.get('/',(req,res)=>{
         const parms = { };
     res.status(200).render('applyNow.pug',parms)
 })
-app.post('/applyNow',(req,res)=>{
-   console.log(req.body)//DATA from the user is access by req.body
+app.post('/',(req,res)=>{
+   console.log(req.body)//DATA from the user is access by req.bppoody
    const parms = {'message': 'Your form has been submitted successfully'}
     res.status(200).render('applyNow.pug',parms)
 })
